@@ -1,6 +1,7 @@
 body
 {
   background-color: #2c2c2c;
+  color: white;
 }
 
 #container
@@ -15,11 +16,177 @@ body
   font-size: 175px;
   color: #ffffff;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #ffffff;
   font-family: Arial;
+  margin-bottom: 15px;
 }
 
 .yellowText
 {
-  color: yellow;
+  color: #ffff00;
 }
+
+#menu
+{
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+}
+
+#menuPossibility0
+{
+  padding-top: 15px;
+  border-left: 1px solid #ffffff; 
+  border-right: 1px solid #ffffff;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  width: 432px;
+  height: 55px;
+  color: #ffffff;
+}
+
+#menuPossibility1
+{
+  padding-top: 15px;
+  border-right: 1px solid #ffffff;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  width: 432px;
+  height: 55px;
+  color: #ffffff;
+}
+
+#menuPossibility2
+{
+  padding-top: 15px;
+  border-right: 1px solid #ffffff;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  width: 432px;
+  height: 55px;
+  color: #ffffff;
+}
+
+#menuPossibility0:hover
+{
+  background: #3c3c3c;
+  font-size: 35px;
+}
+
+#menuPossibility1:hover
+{
+  background: #3c3c3c;
+  font-size: 35px;
+}
+
+#menuPossibility2:hover
+{
+  background: #3c3c3c;
+  font-size: 35px;
+}
+
+#tableOfContents
+{
+  border: 1px solid #ffffff;
+  height: 369px;
+  width: 1300px;
+}
+
+#column0
+{
+  width: 432px;
+  height: 310px;
+  float: left;
+  border-top: 1px solid #ffffff;
+}
+
+#column1
+{
+  width: 432px;
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  float: left;
+  height: 310px;
+}
+
+#column2
+{
+  width: 434px;
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  float: left;
+  height: 310px;
+}
+
+#columnTitle
+{
+  width: 1280px;
+  height: 28px;
+  background-color: #42b90b;
+  font-size: 25px;
+  font-family: Arial;
+  text-align: center; 
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff
+}
+
+.line
+{
+  width: 422px;
+  height: 20px;
+  border-bottom: 1px solid #ffffff;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.line2
+{
+  width: 422px;
+  height: 20px;
+  border-bottom: 1px solid #ffffff;
+  background-color: #3c3c3c;
+  padding: 5px;
+  font-size: 20px;
+}
+
+#bigTitle
+{
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial;
+  margin: 50px 0px 50px 0px;
+  width: 1300px;
+}
+
+.tinyTitle
+{
+  text-align: center;
+  font-size: 25px;
+  padding: 8px;
+  font-family: Arial;
+}
+
+#content
+{
+  width: 1300px;
+}
+
+.contents
+{
+  width: 1300px;
+  border: 1px solid #ffffff;
+  height: 200px;
+}
+
+#zegar
+{
+  color: red;
+  font-size: 120px;
+  font-family: Arial;
+  text-align: center;
+  padding: 30px;
+}
+
