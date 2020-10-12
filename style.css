@@ -2,6 +2,8 @@ body
 {
   background-color: #2c2c2c;
   color: white;
+  font-family: Arial;
+  cursor: default;
 }
 
 #container
@@ -21,11 +23,6 @@ body
   margin-bottom: 15px;
 }
 
-.yellowText
-{
-  color: #ffff00;
-}
-
 #menu
 {
   text-align: center;
@@ -40,7 +37,7 @@ body
   float: left;
   font-size: 30px;
   text-align: center;
-  width: 432px;
+  width: 648px;
   height: 55px;
   color: #ffffff;
 }
@@ -52,19 +49,7 @@ body
   float: left;
   font-size: 30px;
   text-align: center;
-  width: 432px;
-  height: 55px;
-  color: #ffffff;
-}
-
-#menuPossibility2
-{
-  padding-top: 15px;
-  border-right: 1px solid #ffffff;
-  float: left;
-  font-size: 30px;
-  text-align: center;
-  width: 432px;
+  width: 649px;
   height: 55px;
   color: #ffffff;
 }
@@ -81,81 +66,27 @@ body
   font-size: 35px;
 }
 
-#menuPossibility2:hover
-{
-  background: #3c3c3c;
-  font-size: 35px;
-}
+/*----------------------------SPIS TRESCI-------------------------------*/
 
-#tableOfContents
-{
-  border: 1px solid #ffffff;
-  height: 369px;
+#spis {
   width: 1300px;
+  height: 500px;
+  font-size: 30px;
 }
 
-#column0
-{
-  width: 432px;
-  height: 310px;
+.part {
   float: left;
-  border-top: 1px solid #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+  width: 650px;
 }
 
-#column1
-{
-  width: 432px;
-  border-left: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  float: left;
-  height: 310px;
-}
-
-#column2
-{
-  width: 434px;
-  border-left: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  float: left;
-  height: 310px;
-}
-
-#columnTitle
-{
-  width: 1280px;
-  height: 28px;
-  background-color: #42b90b;
-  font-size: 25px;
-  font-family: Arial;
-  text-align: center; 
-  padding: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #fff
-}
-
-.line
-{
-  width: 422px;
-  height: 20px;
-  border-bottom: 1px solid #ffffff;
-  padding: 5px;
-  font-size: 20px;
-}
-
-.line2
-{
-  width: 422px;
-  height: 20px;
-  border-bottom: 1px solid #ffffff;
-  background-color: #3c3c3c;
-  padding: 5px;
-  font-size: 20px;
-}
+/*-------------------------------CONTENT--------------------------------*/
 
 #bigTitle
 {
   text-align: center;
-  font-size: 50px;
+  font-size: 75px;
   font-family: Arial;
   margin: 50px 0px 50px 0px;
   width: 1300px;
@@ -164,9 +95,10 @@ body
 .tinyTitle
 {
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
   padding: 8px;
   font-family: Arial;
+  color: yellow;
 }
 
 #content
@@ -174,12 +106,16 @@ body
   width: 1300px;
 }
 
-.contents
+.scripts
 {
   width: 1300px;
   border: 1px solid #ffffff;
-  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  text-align: center;
 }
+
+/*-------------------------------SCRIPTS------------------------------*/
 
 #zegar
 {
@@ -188,5 +124,130 @@ body
   font-family: Arial;
   text-align: center;
   padding: 30px;
+}
+
+#slider {
+  width: 1300px;
+  height: 500px;
+}
+
+#kalkulator {
+  width: 1300px;
+  height: 500px;
+  padding: 20px;
+}
+
+#kalkPole1 {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #3c3c3c;
+}
+
+#kalkPole2 {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #3c3c3c;
+}
+
+#kalkWynik {
+  width: 200px;
+  height: 50px;
+  font-size: 45px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+}
+
+#dodawanie {
+  width: 150px;
+  height: 150px;
+  font-size: 110px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#dodawanie:hover {
+  background-color: #2b2b2b;
+  color: #999;
+}
+
+#odejmowanie {
+  width: 150px;
+  height: 150px;
+  font-size: 110px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#odejmowanie:hover {
+  background-color: #2b2b2b;
+  color: #999;
+}
+
+#mnozenie {
+  width: 150px;
+  height: 150px;
+  font-size: 110px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#mnozenie:hover {
+  background-color: #2b2b2b;
+  color: #999;
+}
+
+#dzielenie {
+  width: 150px;
+  height: 150px;
+  font-size: 110px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#dzielenie:hover {
+  background-color: #2b2b2b;
+  color: #999;
+}
+
+#kalendarz
+{
+  color: red;
+  font-size: 50px;
+  font-family: Arial;
+  padding: 30px;
+  margin: auto;
+}
+
+#generator
+{
+  color: red;
+  font-size: 50px;
+  font-family: Arial;
+  padding: 30px;
+  margin: auto;
+}
+
+#liczbaPierwsza
+{
+  color: red;
+  font-size: 50px;
+  font-family: Arial;
+  padding: 30px;
+  margin: auto;
 }
 

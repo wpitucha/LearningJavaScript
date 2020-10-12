@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="scripts.js" type="text/js" />
 
         <script type="text/javascript" src="scripts.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
     </head>
 
@@ -20,7 +21,7 @@
 
         <div id="container">
             <div id="logo">
-                Java<span class="yellowText">Script</span>
+                Java<span style='color:yellow'>Script</span>
             </div>
 
             <div id="menu">
@@ -30,118 +31,145 @@
                 <div id="menuPossibility1">
                     GAMES
                 </div>
-                <div id="menuPossibility2">
-                    NOTES
-                </div>
                 <div style="clear: both"></div>
             </div>
-            <div id="tableOfContents">
-                <div id="columnTitle">
-                    Table Of Contents
-                </div>
-                <div id="column0">
-                    <div class="line2">
-                        1. Zegar (Done)
-                    </div>
-                    <div class="line">
-                        2. Pokaz zdjeć (To do)
-                    </div>
-                    <div class="line2">
-                        3. Kalkulator (To do)
-                    </div>
-                    <div class="line">
-                        4. Spawdzanie roku przestępnego (To do)
-                    </div>
-                    <div class="line2">
-                        5. Generator losowych liczb(To do)
-                    </div>
-                    <div class="line">
-                        6. Określanie wieku w latach (To do)
-                    </div>
-                    <div class="line2">
-                        7. Sprawdz, czy liczba jest liczbą pierwszą (To do)
-                    </div>
-                    <div class="line">
-                        8. Walidacja numeru NIP (To do)
-                    </div>
-                    <div class="line2">
-                        9. Walidacja numeru REGON (To do)
-                    </div>
-                    <div class="line">
-                        10. Wyznaczanie n-tego wyrazu ciągu (To do)
-                    </div>
-                </div>
-                <div id="column1">
-                    <div class="line2">
-                        1. Wisielec (To do)
-                    </div>
-                    <div class="line">
-                        2. Memory (To do)
-                    </div>
-                    <div class="line2">
-                        3. Snake (To do)
-                    </div>
-                    <div class="line">
-                        4. 2048 (To do)
-                    </div>
-                    <div class="line2">
-                        5. T-Rex from chrome (To do)
-                    </div>
-                    <div class="line">
-                        6. Flappy Bird (To do)
-                    </div>
-                    <div class="line2">
-                        7. Tetris (To do)
-                    </div>
-                    <div class="line">
-                        8. Ping-Pong (To do)
-                    </div>
-                    <div class="line2">
-                        9. Motorcycle (To do)
-                    </div>
-                    <div class="line">
-                        10. Red Ball (To do)
-                    </div>
-                </div>
-                <div id="column2">
-                    <div class="line2">
-                        -----
-                    </div>
-                    <div class="line">
 
-                    </div>
-                    <div class="line2">
 
-                    </div>
-                    <div class="line">
+        <div id='spis'>
 
-                    </div>
-                    <div class="line2">
-
-                    </div>
-                    <div class="line">
-
-                    </div>
-                    <div class="line2">
-
-                    </div>
-                    <div class="line">
-
-                    </div>
-                    <div class="line2">
-
-                    </div>
-                    <div class="line">
-
-                    </div>
-                </div>
+            <div class='part'>
+                <ul class='kolumn'>SCRIPTS
+                    <li><span style=color:green>Zegar</span></li>
+                    <li><span style=color:green>Pokaz zdjęć</span></li>
+                    <li><span style=color:green>Żarówka</span></li>
+                    <li><span style=color:red>Sprawdzenie roku przęstepnego</span></li>
+                    <li><span style=color:green>Kalendarz</span></li>
+                    <li><span style=color:green>Generator losowych liczb</span></li>
+                    <li><span style=color:red>Sprawdzanie liczby pierwszej</span></li>
+                    <li><span style=color:green>Kalkulator</span></li>
+                    <li><span style=color:red>Oblicznie pola figury</span></li>
+                    <li><span style=color:red>Czy liczba nalezy do przedziału</span></li>
+                </ul>
             </div>
+
+            <div class='part'>
+                <ul class='kolumn'> GAMES
+                    <li><span style=color:red>Wisielec</span></li>
+                    <li><span style=color:red>Odkrywanie kart</span></li>
+                    <li><span style=color:red>Kółko i krzyżyk</span></li>
+                    <li><span style=color:red>1024</span></li>
+                    <li><span style=color:red>Snake</span></li>
+                    <li><span style=color:red>Ping Pong</span></li>
+                    <li><span style=color:red>Motorbike</span></li>
+                    <li><span style=color:red>Brakeout</span></li>
+                    <li><span style=color:red>Flappy Bird [?]</span></li>
+                    <li><span style=color:red>Mario</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style=clear:both></div>
+            
             <div id="content">
+
                 <div id="bigTitle">SCRIPTS</div>
-                    <div class="tinyTitle">ZEGAR</div>
-                    <div class="contents">
-                        <div id='zegar'></div>
+
+                    <div class="tinyTitle">
+                        ZEGAR
                     </div>
+
+                        <div class="scripts">
+                            <div id='zegar'></div>
+                        </div>
+
+                        <div class="tinyTitle">
+                            KALEDZARZ
+                        </div>
+    
+                            <div class="scripts">
+                                <div id='kalendarz'>
+                                    Zobacz aktualną datę!
+                                    </br>
+                                    <input type='button' value='Tutaj!' onclick='kalendarz()'>
+                                </div>
+                            </div>
+
+                        <div class="tinyTitle">
+                                GENERATOR LOSOWYCH LICZB
+                        </div>
+        
+                            <div class="scripts">
+                                <div id='generator'>
+                                    Wygeneruj losową liczbę!
+                                </br>
+                                    <span style='font-size:20px; color:white'>Podaj liczbe maksymalna:</span>
+                                    <input type='text' id='genMax'>
+                                </br>
+                                    <input type='button' value='Wygeneruj' onclick='generator()'>
+                                </div>
+                            </div>
+
+                    <div class='tinyTitle'>
+                        POKAZ ZDJĘĆ
+                    </div>
+
+                        <div class='scripts'>
+
+                            <div id='slider'>
+                                <input type='submit' value='Rozpocznij Pokaz' onclick='SliderZdjecia()'>
+                            </div>
+                            
+                        </div>
+
+                    <div class='tinyTitle'>
+                        ZAROWKA
+                    </div>
+
+                        <div class='scripts'>
+
+                            <div id='zarowka'>
+                                <input id='zarowkaWlacz' value='Włącz' type='button' onclick='document.getElementById("zarowkaZdjecie").src="img/zarowka/wlaczona.gif"'>
+                                <img id='zarowkaZdjecie' src='img/zarowka/wylaczona.gif'>
+                                <input id='zarowkaWlacz' value='Włącz' type='button' onclick='document.getElementById("zarowkaZdjecie").src="img/zarowka/wylaczona.gif"'>
+                            </div>
+
+                        </div>
+
+                        <div class='tinyTitle'>
+                            SPRAWDZANIE LICZBY PIERWSZEJ
+                        </div>
+    
+                            <div class='scripts'>
+    
+                                <div id='liczbaPierwsza'>
+                                    Sprawdz, czy podana liczba jest liczbą pierwszą!
+                                </br>
+                                    <span style='color: white; font-size: 20px'>Podaj liczbe pierwsza: </span>
+                                    <input id='podajLiczbePierwsza'type='text'>
+                                </div>
+    
+                            </div>
+
+                    <div class='tinyTitle'>
+                        KALKULATOR
+                    </div>
+
+                        <div class='scripts'>
+                            <div id='kalkulator'>
+
+                                <input id='kalkPole1' type='text'/>
+                                <input id='kalkPole2' type='text'/>
+                                <div id='kalkWynik'></div>
+                                
+                                </br>
+
+                                <input id='dodawanie' type='button' value='+' onclick="dodaj()"/>
+                                <input id='odejmowanie' type='submit' value='−' onclick="odejmij()"/>
+                                <input id='mnozenie' type='submit' value='×' onclick="pomnoz()"/>
+                                <input id='dzielenie' type='submit' value='÷' onclick="podziel()"/>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div id="footer"></div>
