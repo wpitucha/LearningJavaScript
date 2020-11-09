@@ -55,9 +55,6 @@ function gra(nr) {
         $('#s'+nr).addClass('sDisabeledX');
     }
 
-    event.target.classList.add(turn);
-    board[row][column] = turn;
-
     rundy++;
     document.getElementById('ticRundy').innerHTML = 'Ruchy: '+rundy;
     
@@ -66,28 +63,10 @@ function gra(nr) {
     else
         document.getElementById('s'+nr).style.color = 'red';
 
-    console.log(sprawdz());
+    sprawdz();
 }
 
 
 function sprawdz() {
     if (rundy == 9) $('#ticWynik').html('Remis!');
-    let winner = null;
-
-    const result = board.reduce((total, row) => total.concat(row));
-    console.log(result);
-
-    moves = {
-        'X': [],
-        'O': []
-    };
-    result.forEach((field, index) => moves[field] ? moves[field].push(index) : null);
-    console.log(moves);
-
-    if (kombinacje.every)(index => moves[player1].indexOf(index > -1)); {
-        Winner = 'X won';
-    }
-    if (kombinacje.every)(index => moves[player2].indexOf(index > -1)); {
-        Winner = 'O won';
-    }
 }
