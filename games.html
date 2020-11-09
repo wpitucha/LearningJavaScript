@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />	
+	    <meta name="description" content="I'll be writing scripts on this website" />
+        <meta name="keywords" content="Javascript" />
+        
+        <title>MyScripts</title>
+
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="scripts.js" type="text/js" />
+        <link rel='stylesheet' href='jquery-3.2.1.min.js' type='texy/js' />
+
+        <script type="text/javascript" src="scripts.js"></script>
+        <script type="text/javascript" src="szubienica.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    </head>
+
+
+    <body>
+
+    <div id="container">
+            <div id="logo">
+                Java<span style='color:yellow'>Script</span>
+            </div>
+
+            <div id="menu">
+                <div id="menuPossibility0">
+                    <a href='index.html'>SCRIPTS</a>
+                </div>
+                <div id="menuPossibility1">
+                    <a href='games.html'>GAMES</a>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+
+            <div id='spis'>
+
+            <div class='part'>
+                <ul class='kolumn'>SCRIPTS
+                    <li><span style=color:green>Zegar</span></li>
+                    <li><span style=color:green>Pokaz zdjęć</span></li>
+                    <li><span style=color:green>Żarówka</span></li>
+                    <li><span style=color:green>Sprawdzenie roku przęstepnego</span></li>
+                    <li><span style=color:green>Kalendarz</span></li>
+                    <li><span style=color:green>Generator losowych liczb</span></li>
+                    <li><span style=color:green>Sprawdzanie liczby pierwszej</span></li>
+                    <li><span style=color:green>Kalkulator</span></li>
+                    <li><span style=color:green>Oblicznie pola figury</span></li>
+                    <li><span style=color:green>Czy liczba nalezy do przedziału</span></li>
+                </ul>
+            </div>
+
+            <div class='part'>
+                <ul class='kolumn'> GAMES
+                    <li><span style=color:green>Wisielec</span></li>
+                    <li><span style=color:green>Odkrywanie kart</span></li>
+                    <li><span style=color:orange>Kółko i krzyżyk</span></li>
+                    <li><span style=color:red>1024</span></li>
+                    <li><span style=color:red>Snake</span></li>
+                    <li><span style=color:red>Ping Pong</span></li>
+                    <li><span style=color:red>Tetris</span></li>
+                    <li><span style=color:red>Painting program</span></li>
+                    <li><span style=color:red>Block.io</span></li>
+                    <li><span style=color:red>One level of Mario</span></li>
+                </ul>
+            </div>
+
+            </div>
+    </div>
+
+        <div style=clear:both></div>
+            
+            <div id="content">
+
+                <div id="bigTitle">GAMES</div>
+
+                <div class="tinyTitle">
+                    WISIELEC
+                </div>
+
+                    <div class="scripts">
+                        <div id='wisielec'>
+                            <div id='plansza'></div>
+
+                            <div id='szubienica'>
+                                <img src='img/szubienica/s0.jpg' alt=''>
+                            </div>
+                            <div id='alfabet'></div>
+                            <div style='clear:both;'></div>
+                        </div>
+                    </div>
+
+                <div class="tinyTitle">
+                        ODSŁANIANIE KART
+                </div>
+    
+                    <div class="scripts">
+                        <div id='karty'>
+                                
+                            <div class='kartyBoard'>
+                                <div class='kartyCard' id='c0'></div>
+                                <div class='kartyCard' id='c1'></div>
+                                <div class='kartyCard' id='c2'></div>
+                                <div class='kartyCard' id='c3'></div>
+
+                                <div class='kartyCard' id='c4'></div>
+                                <div class='kartyCard' id='c5'></div>
+                                <div class='kartyCard' id='c6'></div>
+                                <div class='kartyCard' id='c7'></div>
+
+                                <div class='kartyCard' id='c8'></div>
+                                <div class='kartyCard' id='c9'></div>
+                                <div class='kartyCard' id='c10'></div>
+                                <div class='kartyCard' id='c11'></div>
+
+                                <div class='kartyScore'>Licznik rund: 0</div>
+
+                                <script src='jquery-3.2.1.min.js'></script>
+                                <script src='karty.js'></script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                <div class="tinyTitle">
+                    KÓŁKO I KRZYŻYK
+                </div>
+
+                    <div class="scripts">
+                        <div id='ticBorder'>
+                            <div class='ticSquare' id='s1' data-row='0' data-column="0"></div>
+                            <div class='ticSquare' id='s2' data-row='0' data-column="1"></div>
+                            <div class='ticSquare' id='s3' data-row='0' data-column="2"></div>
+
+                            <div class='ticSquare' id='s4' data-row='1' data-column="0" style=clear:both></div>
+                            <div class='ticSquare' id='s5' data-row='1' data-column="1"></div>
+                            <div class='ticSquare' id='s6' data-row='1' data-column="2"></div>
+
+                            <div class='ticSquare' id='s7' data-row='2' data-column="0" style=clear:both></div>
+                            <div class='ticSquare' id='s8' data-row='2' data-column="1"></div>
+                            <div class='ticSquare' id='s9' data-row='2' data-column="2"></div>
+
+                            <div style=clear:both></div>
+
+                            <script src='tictac.js'></script>
+                        </div>
+                        <div id='ticRundy'>Ruchy: 0</div>
+                        <div id='ticWynik'></div>
+                    </div>
+
+                <div class="tinyTitle">
+                    1024
+                </div>
+
+                    <div class="scripts">
+                        <div id='1024'>
+                            <div class='1024Square' id='s1' data-row='0' data-column="0"></div>
+                            <div class='1024Square' id='s2' data-row='0' data-column="1"></div>
+                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
+                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
+
+                            <div class='1024Square' id='s4' data-row='1' data-column="0" style=clear:both></div>
+                            <div class='1024Square' id='s5' data-row='1' data-column="1"></div>
+                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
+                            <div class='1024Square' id='s6' data-row='1' data-column="2"></div>
+
+                            <div class='1024Square' id='s7' data-row='2' data-column="0" style=clear:both></div>
+                            <div class='1024Square' id='s8' data-row='2' data-column="1"></div>
+                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
+                            <div class='1024Square' id='s9' data-row='2' data-column="2"></div>
+
+                            <div style=clear:both></div>
+
+                            <script src='1024.js'></script>
+                        </div>
+                        <div id='1024Rundy'>Ruchy: 0</div>
+                        <div id='1024Wynik'></div>
+                    </div>
+
+                </div>
+    
+        <div id='footer'>&copy; 2020</div>
+    </body>
+</html>
