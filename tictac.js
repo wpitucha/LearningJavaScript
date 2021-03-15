@@ -1,3 +1,4 @@
+/*
 let s1 = document.getElementById('s1');
 let s2 = document.getElementById('s2');
 let s3 = document.getElementById('s3');
@@ -41,9 +42,6 @@ const kombinacje = [ [1,2,3], [4,5,6], [7,8,9],
 function gra(nr) {
     //alert(nr);
 
-    const {row, column} = event.target.dataset;
-    const turn = rundy % 2 === 0 ? player2 : player1;
-
     if (rundy%2 == 0) {
         document.getElementById('s'+nr).innerHTML = player2;
         console.log(player2+' wybrał pole nr: '+nr);
@@ -63,10 +61,71 @@ function gra(nr) {
     else
         document.getElementById('s'+nr).style.color = 'red';
 
+    
+
     sprawdz();
 }
 
 
-function sprawdz() {
-    if (rundy == 9) $('#ticWynik').html('Remis!');
+function sprawdz(nr) { 
+    if (rundy == 9) {
+        $('#ticWynik').html('Remis!');
+    }
+    else {
+        
+    }
 }
+*/
+
+const fieldsElements = document.querySelectorAll('.ticSquare');
+
+const fields = ['', '', '', '', '', '', '', '', ''];
+
+gameActive = true; 
+let round = 0;
+
+const winningConditions = [
+      [0,1,2], [3,4,5], [6,7,8],
+      [0,3,6], [1,4,7], [2,5,8],
+      [0,4,8], [2,4,6] ];
+
+
+let activePlayer = 'X';
+
+const validateGame = () => {
+    if (round == 9) document.getElementById('ticWynik').innerHTML = 'Remis!';
+    else {
+    for(let i=0; i<=7; i++) {
+        const [posA, posB, posC] = winningConditions[i];
+        const value1 = fields[posA];
+        const value2 = fields[posB];
+        const value3 = fields[posC];
+        
+        if (value1 !== '' && value1 === value2 && value1 === value3) {
+            gameActive = false;
+            document.getElementById('ticWynik').innerHTML = activePlayer+' Wins!';
+        }
+    }}
+}
+
+fieldsElements.forEach((fieldsElements) => {
+    fieldsElements.addEventListener('click', (event) => {
+
+        const {pos} = event.target.dataset; 
+        console.log(pos);
+
+        if (gameActive && fields[pos] === '') {
+
+            fields[pos] = activePlayer;
+            event.target.classList.add(`board_item-${activePlayer}`);
+            activePlayer = activePlayer === 'X' ? 'O' : 'X';
+
+            round++;
+            document.getElementById('ticRundy').innerHTML = 'Ruchy: '+round;
+
+            validateGame();
+        }
+
+    });
+});
+

@@ -17,7 +17,7 @@
     </head>
 
 
-    <body onload="timer();">
+    <body onload="timer()">
 
         <div id="container">
             <div id="logo">
@@ -26,10 +26,10 @@
 
             <div id="menu">
                 <div id="menuPossibility0">
-                    SCRIPTS
+                    <a href='index.html'>SCRIPTS</a>
                 </div>
                 <div id="menuPossibility1">
-                    GAMES
+                    <a href='games.html'>GAMES</a>
                 </div>
                 <div style="clear: both"></div>
             </div>
@@ -42,21 +42,21 @@
                     <li><span style=color:green>Zegar</span></li>
                     <li><span style=color:green>Pokaz zdjęć</span></li>
                     <li><span style=color:green>Żarówka</span></li>
-                    <li><span style=color:red>Sprawdzenie roku przęstepnego</span></li>
+                    <li><span style=color:green>Sprawdzenie roku przęstepnego</span></li>
                     <li><span style=color:green>Kalendarz</span></li>
                     <li><span style=color:green>Generator losowych liczb</span></li>
-                    <li><span style=color:red>Sprawdzanie liczby pierwszej</span></li>
+                    <li><span style=color:green>Sprawdzanie liczby pierwszej</span></li>
                     <li><span style=color:green>Kalkulator</span></li>
-                    <li><span style=color:red>Oblicznie pola figury</span></li>
-                    <li><span style=color:red>Czy liczba nalezy do przedziału</span></li>
+                    <li><span style=color:green>Oblicznie pola figury</span></li>
+                    <li><span style=color:green>Czy liczba nalezy do przedziału</span></li>
                 </ul>
             </div>
 
             <div class='part'>
                 <ul class='kolumn'> GAMES
-                    <li><span style=color:red>Wisielec</span></li>
-                    <li><span style=color:red>Odkrywanie kart</span></li>
-                    <li><span style=color:red>Kółko i krzyżyk</span></li>
+                    <li><span style=color:green>Wisielec</span></li>
+                    <li><span style=color:green>Odkrywanie kart</span></li>
+                    <li><span style=color:orange>Kółko i krzyżyk</span></li>
                     <li><span style=color:red>1024</span></li>
                     <li><span style=color:red>Snake</span></li>
                     <li><span style=color:red>Ping Pong</span></li>
@@ -117,7 +117,8 @@
                         <div class='scripts'>
 
                             <div id='slider'>
-                                <input type='submit' value='Rozpocznij Pokaz' onclick='SliderZdjecia()'>
+                                Kliknij, aby rozpocząć pokaz kilku zdjęć </br>
+                                <input type='button' value='Rozpocznij Pokaz' onclick='SliderZdjecia()'>
                             </div>
                             
                         </div>
@@ -136,17 +137,37 @@
 
                         </div>
 
+                    <div class='tinyTitle'>
+                            SPRAWDZANIE ROKU PRZESTEPNEGO
+                    </div>
+    
+                        <div class='scripts'>
+    
+                        <div id=rokPrzestepny>
+                            Sprawdź, czy podany rok jest rokiem przestępnym
+                        </br>
+                            <span style='color: white; font-size: 20px'>Podaj rok: </span>
+                            <input id='rok' type='text'>
+                        </br>
+                            <input type='button' value='Sprawdź' onclick='sprawdzRok()'>
+                         </br>
+                            <div id='rokWynik'></div>
+                        </div>
+    
+                        </div>
+
                         <div class='tinyTitle'>
                             SPRAWDZANIE LICZBY PIERWSZEJ
                         </div>
     
                             <div class='scripts'>
     
-                                <div id='liczbaPierwsza'>
-                                    Sprawdz, czy podana liczba jest liczbą pierwszą!
+                                <div id='liczbaPierwszaDiv'>
+                                    Sprawdz, czy podana liczba jest liczbą pierwszą
                                 </br>
-                                    <span style='color: white; font-size: 20px'>Podaj liczbe pierwsza: </span>
-                                    <input id='podajLiczbePierwsza'type='text'>
+                                    <span style='color: white; font-size: 20px'>Podaj liczbę: </span>
+                                    <input id='liczbaPierwsza' type='text'>
+                                    <input id='liczbaPierwszaSprawdz' value='Sprawdź' type='button' onclick='podajLiczbePierwsza()'>
                                 </div>
     
                             </div>
@@ -170,10 +191,57 @@
                                 <input id='dzielenie' type='submit' value='÷' onclick="podziel()"/>
                             </div>
                         </div>
+
+                        <div class='tinyTitle'>
+                            OBLICZANIE POLA FIGURY
+                        </div>
+    
+                            <div class='scripts'>
+
+                                <div id='poleFigury'>
+                                    Oblicz pole figury
+                                </br>
+                                    <select id='figura'>
+                                        <option value='Kwadrat'>Kwadrat</option>
+                                        <option value='Prostokąt'>Prostokąt</option>
+                                    </select>
+                                </br>
+                                    <span style="font-size: 20px; color: white">Bok a:</span>
+                                    <input id='bok1figury' type='text'>
+                                    <span style='color: white; font-size: 20px'>Bok b:</span>
+                                    <input id='bok2figury' type='text'>
+                                </br>
+                                    <input id='poleOblicz' type='button' value='Oblicz Pole' onclick='obliczPole()'>
+                                </br>
+                                    <div id='poleWynik'></div>
+                                </div>
+                            </div>
+
+                        
+                        <div class='tinyTitle'>
+                            SPRAWDZANIE LICZBY W PRZEDZIALE
+                        </div>
+        
+                            <div class='scripts'>
+                                
+                                <div id='przedzial'>
+                                    Sprawdz, czy liczba należy do przedziału
+                                </br>
+                                    <span style="font-size: 20px; color: white">Podaj swoją liczbę: </span>
+                                    <input id='liczbax' type='text'>
+                                </br>
+                                    <span style="font-size: 20px; color: white">Podaj swój przedział: </span>
+                                </br>
+                                    <input id='warunek1przedzialu' type='text'>
+                                    <input id='warunek2przedzialu' type='text'>
+                                </br>
+                                    <input id='sprawdzPrzedzial' type='button' value='Sprawdź!' onclick='przedzial()'>
+                                </br>
+                                    <div id='polePrzedzial'></div>
+                                </div>
+                            </div>
                 </div>
             </div>
-            <div id="footer"></div>
-        </div>
-
+            <div id='footer'>&copy; 2020</div>
     </body>
 </html>

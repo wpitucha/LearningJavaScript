@@ -1,103 +1,67 @@
-var cards =  ["ciri.png", "geralt.png", "jaskier.png", "jaskier.png", "iorweth.png", "triss.png", "geralt.png", "yen.png", "ciri.png", "triss.png", "yen.png", "iorweth.png"];
+const cardsColor = ['red', 'red', 'green', 'green', 'blue', 'blue', 'brown', 'brown',
+'yellow', 'yellow', 'darkgreen', 'darkgreen', 'violet', 'violet', 'purple', 'purple', 'gray', 'gray'];
 
-//alert (cards[4]);
-//console.log(cards);
+let cards = document.getElementsByClassName('karta');
+cards = [...cards];
 
-var c0 = document.getElementById('c0');
-var c1 = document.getElementById('c1');
-var c2 = document.getElementById('c2');
-var c3 = document.getElementById('c3');
+let activeCard = '';
+const activeCards = [];
 
-var c4 = document.getElementById('c4');
-var c5 = document.getElementById('c5');
-var c6 = document.getElementById('c6');
-var c7 = document.getElementById('c7');
+const gamePairs = cards.length/2;
+let gameResult = 0;
 
-var c8 = document.getElementById('c8');
-var c9 = document.getElementById('c9');
-var c10 = document.getElementById('c10');
-var c11 = document.getElementById('c11');
+const clickCard = function() {
+    //console.log('click');
+    activeCard = this;
+    activeCard.classList.remove('hidden');
 
-c0.addEventListener("click", function(){ revealCard(0);}); 
-c1.addEventListener('click', function(){ revealCard(1); }); 
-c2.addEventListener('click', function(){ revealCard(2); }); 
-c3.addEventListener('click', function(){ revealCard(3); }); 
-
-c4.addEventListener('click', function(){ revealCard(4); }); 
-c5.addEventListener('click', function(){ revealCard(5); }); 
-c6.addEventListener('click', function(){ revealCard(6); }); 
-c7.addEventListener('click', function(){ revealCard(7); }); 
-
-c8.addEventListener('click', function(){ revealCard(8); }); 
-c9.addEventListener('click', function(){ revealCard(9); }); 
-c10.addEventListener('click', function(){ revealCard(10); }); 
-c11.addEventListener('click', function(){ revealCard(11); }); 
-
-var oneVisible = false;
-var turnCounter = 0;
-var visible_nr;
-var lock = false;
-var pairsLeft = 6;
-
-function revealCard(nr) {
-    var opacityValue = $('#c'+nr).css('opacity');
-
-    if(opacityValue != 0 && lock == false) {
-
-        lock = true;
-
-        var obraz = 'url(img/kolory/'+cards[nr]+')';
-
-        $('#c'+nr).css('background-image', obraz);
-        $('#c'+nr).addClass('kartyCardA');
-        $('#c'+nr).removeClass('kartyCard');
-   
-        if (oneVisible == false) {
-           oneVisible = true;
-           visible_nr = nr;
-           lock = false;
-        }
-   
-        else {
-   
-           if(cards[visible_nr] == cards[nr]) {
-               //alert('para');
-               setTimeout(function() { hide2cards(nr, visible_nr) }, 600);
-           }
-           else {
-               //alert('brak pary');
-               setTimeout(function() { restore2cards(nr, visible_nr) }, 600);
-           }
-   
-           turnCounter++;
-           $('.kartyScore').html('Licznik rund: '+turnCounter);
-           oneVisible = false;
-        }
+    if(activeCards.length === 0) {
+        //console.log('1');
+        activeCards[0] = activeCard;
+        return;
     }
+    else {
+        cards.forEach(card => {
+            card.removeEventListener('click', clickCard)
+        })
+        activeCards[1] = activeCard;
+        console.log(activeCards);
+        setTimeout(function(){
+            if(activeCards[0].className === activeCards[1].className) {
+                //console.log('win');
+                activeCards.forEach(card => {
+                    card.classList.add('off');
+                })
+            }
+            else {
+                //console.log('lose');
+                activeCards.forEach(card => {
+                    card.classList.add('hidden');
+                })
+            }
+            activeCard = '';
+            activeCards.length = 0;
+            
+            cards.forEach(card => card.addEventListener('click', clickCard))
+        }, 500)
 
 
-}
-
-function hide2cards(nr1, nr2) {
-    $('#c'+nr1).css('opacity', '0');
-    $('#c'+nr2).css('opacity', '0');
-
-    pairsLeft--;
-    if(pairsLeft == 0) {
-        $('.board').html('<h1> Wygrałeś!</br>Zrobiłeś to w '+turnCounter+' rundach</h1>');
     }
-
-    lock = false;
 }
 
-function restore2cards(nr1, nr2) {
-    $('#c'+nr1).css('background-image', 'url(img/kolory/karta.png');
-    $('#c'+nr1).addClass('kartyCard');
-    $('#c'+nr1).removeClass('kartyCardA');
+const init = function() {
+    cards.forEach(function(card) {
+        const position = Math.floor(Math.random()*cardsColor.length);
+        card.classList.add(cardsColor[position]);
+        cardsColor.splice(position, 1);
 
-    $('#c'+nr2).css('background-image', 'url(img/kolory/karta.png');
-    $('#c'+nr2).addClass('kartyCard');
-    $('#c'+nr2).removeClass('kartyCardA');
-
-    lock = false;
+        setTimeout(function(){
+            cards.forEach(function(card){
+                card.classList.add('hidden');
+                card.addEventListener('click', clickCard)
+            });
+        }, 2000)
+    });
 }
+
+init();

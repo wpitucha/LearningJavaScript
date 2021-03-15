@@ -13,7 +13,6 @@
         <link rel='stylesheet' href='jquery-3.2.1.min.js' type='texy/js' />
 
         <script type="text/javascript" src="scripts.js"></script>
-        <script type="text/javascript" src="szubienica.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
     </head>
@@ -57,15 +56,15 @@
             <div class='part'>
                 <ul class='kolumn'> GAMES
                     <li><span style=color:green>Wisielec</span></li>
-                    <li><span style=color:green>Odkrywanie kart</span></li>
-                    <li><span style=color:orange>Kółko i krzyżyk</span></li>
-                    <li><span style=color:red>1024</span></li>
-                    <li><span style=color:red>Snake</span></li>
-                    <li><span style=color:red>Ping Pong</span></li>
+                    <li><span style=color:green>Memory game</span></li>
+                    <li><span style=color:Green>Kółko i krzyżyk</span></li>
+                    <li><span style=color:green>1024</span></li>
+                    <li><span style=color:orange>Snake</span></li>
+                    <li><span style=color:green>Ping Pong</span></li>
                     <li><span style=color:red>Tetris</span></li>
-                    <li><span style=color:red>Painting program</span></li>
-                    <li><span style=color:red>Block.io</span></li>
-                    <li><span style=color:red>One level of Mario</span></li>
+                    <li><span style=color:green>Rectengle</span></li>
+                    <li><span style=color:red>Bounce Ball</span></li>
+                    <li><span style=color:orange>Gra w budowanie wieży</span></li>
                 </ul>
             </div>
 
@@ -83,48 +82,50 @@
                 </div>
 
                     <div class="scripts">
-                        <div id='wisielec'>
+                        <div id='pojemnik'>
                             <div id='plansza'></div>
 
                             <div id='szubienica'>
                                 <img src='img/szubienica/s0.jpg' alt=''>
                             </div>
                             <div id='alfabet'></div>
-                            <div style='clear:both;'></div>
+                            <div style='clear:both'></div>
+
                         </div>
+                        <script src="szubienica.js"></script>
                     </div>
 
                 <div class="tinyTitle">
-                        ODSŁANIANIE KART
+                        MEMORY GAME
                 </div>
     
                     <div class="scripts">
                         <div id='karty'>
-                                
-                            <div class='kartyBoard'>
-                                <div class='kartyCard' id='c0'></div>
-                                <div class='kartyCard' id='c1'></div>
-                                <div class='kartyCard' id='c2'></div>
-                                <div class='kartyCard' id='c3'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
+                            <div class='karta'></div>
 
-                                <div class='kartyCard' id='c4'></div>
-                                <div class='kartyCard' id='c5'></div>
-                                <div class='kartyCard' id='c6'></div>
-                                <div class='kartyCard' id='c7'></div>
-
-                                <div class='kartyCard' id='c8'></div>
-                                <div class='kartyCard' id='c9'></div>
-                                <div class='kartyCard' id='c10'></div>
-                                <div class='kartyCard' id='c11'></div>
-
-                                <div class='kartyScore'>Licznik rund: 0</div>
-
-                                <script src='jquery-3.2.1.min.js'></script>
-                                <script src='karty.js'></script>
-                            </div>
+                            <script src='karty.js'></script>
+                        </div>
 
                         </div>
-                    </div>
+
+                    <div style='clear: both'></div>
 
                 <div class="tinyTitle">
                     KÓŁKO I KRZYŻYK
@@ -132,17 +133,17 @@
 
                     <div class="scripts">
                         <div id='ticBorder'>
-                            <div class='ticSquare' id='s1' data-row='0' data-column="0"></div>
-                            <div class='ticSquare' id='s2' data-row='0' data-column="1"></div>
-                            <div class='ticSquare' id='s3' data-row='0' data-column="2"></div>
+                            <div class='ticSquare' id='s1' data-pos='0' ></div>
+                            <div class='ticSquare' id='s2' data-pos='1' ></div>
+                            <div class='ticSquare' id='s3' data-pos='2' ></div>
 
-                            <div class='ticSquare' id='s4' data-row='1' data-column="0" style=clear:both></div>
-                            <div class='ticSquare' id='s5' data-row='1' data-column="1"></div>
-                            <div class='ticSquare' id='s6' data-row='1' data-column="2"></div>
+                            <div class='ticSquare' id='s4' data-pos='3' style=clear:both></div>
+                            <div class='ticSquare' id='s5' data-pos='4' ></div>
+                            <div class='ticSquare' id='s6' data-pos='5' ></div>
 
-                            <div class='ticSquare' id='s7' data-row='2' data-column="0" style=clear:both></div>
-                            <div class='ticSquare' id='s8' data-row='2' data-column="1"></div>
-                            <div class='ticSquare' id='s9' data-row='2' data-column="2"></div>
+                            <div class='ticSquare' id='s7' data-pos='6' style=clear:both></div>
+                            <div class='ticSquare' id='s8' data-pos='7' ></div>
+                            <div class='ticSquare' id='s9' data-pos='8' ></div>
 
                             <div style=clear:both></div>
 
@@ -150,6 +151,8 @@
                         </div>
                         <div id='ticRundy'>Ruchy: 0</div>
                         <div id='ticWynik'></div>
+                        <button class='reset-button'>Zresetuj</button>
+
                     </div>
 
                 <div class="tinyTitle">
@@ -157,29 +160,96 @@
                 </div>
 
                     <div class="scripts">
-                        <div id='1024'>
-                            <div class='1024Square' id='s1' data-row='0' data-column="0"></div>
-                            <div class='1024Square' id='s2' data-row='0' data-column="1"></div>
-                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
-                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
+                        <div id='S1024'>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
 
-                            <div class='1024Square' id='s4' data-row='1' data-column="0" style=clear:both></div>
-                            <div class='1024Square' id='s5' data-row='1' data-column="1"></div>
-                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
-                            <div class='1024Square' id='s6' data-row='1' data-column="2"></div>
+                            <div class='Square1024' style=clear:both></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
 
-                            <div class='1024Square' id='s7' data-row='2' data-column="0" style=clear:both></div>
-                            <div class='1024Square' id='s8' data-row='2' data-column="1"></div>
-                            <div class='1024Square' id='s3' data-row='0' data-column="2"></div>
-                            <div class='1024Square' id='s9' data-row='2' data-column="2"></div>
+                            <div class='Square1024' style=clear:both></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+
+                            <div class='Square1024' style=clear:both></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
+                            <div class='Square1024' ></div>
 
                             <div style=clear:both></div>
 
                             <script src='1024.js'></script>
                         </div>
-                        <div id='1024Rundy'>Ruchy: 0</div>
-                        <div id='1024Wynik'></div>
+                        PORUSZANIE</br>
+                        <button onclick='Up()'>Up</button>
+                        <button onclick='Down()'>Down</button>
+                        <button onclick='Left()'>Left</button>
+                        <button onclick='Right()'>Right</button>
                     </div>
+
+                    <div class="tinyTitle">
+                        Ping Pong
+                    </div>
+    
+                        <div class="scripts">
+                            <div id='Pong'>
+                                <canvas id='pongGame'></canvas>
+                                <script src='pong.js'></script>
+                            </div>
+                        </div>
+
+
+                    <div class="tinyTitle">
+                        Snake
+                    </div>
+    
+                        <div class="scripts">
+                            <div id='snake'>
+                                <canvas id='SnakeCav'></canvas>
+                                <script src='snake.js'></script>
+                            </br>
+                                <button id='snakeUp' onclick="snakeUp()">Up</button>
+                                <button id='snakeDown'>Down</button>
+                                <button id='snakeLeft'>Left</button>
+                                <button id='snakeRight'>Right</button>
+                                <div style='clear:both'></div>
+                            </div>
+                        </div>
+
+                        <div class="tinyTitle">
+                            Rectengle
+                        </div>
+        
+                            <div class="scripts">
+                                <div id='painting'>
+                                    <canvas id='paint'></canvas>
+                                    <script src='rectengle.js'></script>
+                                    <button onclick="conditionClick()">Click!</button>
+                                </br>
+                                    <div style='clear:both'></div>
+                                </div>
+                            </div>
+
+
+                        <div class="tinyTitle">
+                            Tower
+                        </div>
+        
+                            <div class="scripts">
+                                <div id='tower'>
+                                    <canvas id='towercanv'></canvas>
+                                    <script src='tower.js'></script>
+                                    <button onclick="towerDown()">Click!</button>
+                                </br>
+                                    <div style='clear:both'></div>
+                                </div>
+                            </div>
+    
 
                 </div>
     
