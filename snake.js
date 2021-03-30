@@ -1,88 +1,64 @@
 const SnakeCav = document.getElementById('SnakeCav');
 const sctx = SnakeCav.getContext('2d');
 
-SnakeCav.width = 1300;
-SnakeCav.height = 500;
-const ctxWidth = SnakeCav.width;
-const ctxHeight = SnakeCav.height;
+const sctxWidth = SnakeCav.width = 400
+const sctxHeight = SnakeCav.height = 400
+snakeSpeed = 7
 
-const snakeHeight = 15;             //wysokosc snakea
-let snakeWidth = 75;                //szerokosc snakea
+let tileCount = 20
+let tileSize = sctxWidth - tileCount - 2
+let headX = 10
+let headY = 10
 
-const foodSize = 15;                //wielkosc jedzenia
-let snakeX = ctxWidth/2;            //pozycja snakea X
-let snakeY = ctxHeight/2;           //pozycja snakea Y
-let snakeSpeedX = 5;
-let snakeSpeedY = 0;
-
-let foodX;
-let foodY;
-
-const tableS = function() {
-    sctx.fillStyle = '#000';
-    sctx.fillRect(0,0, ctxWidth, ctxHeight);
-    //console.log('bialy');
-}
-
-const Snake = function() {
-    //console.log('poruszam sie');
-    //console.log('SNAKEX='+snakeX);
-    //console.log('SNAKEY='+snakeY);
-    sctx.fillStyle = '#0f0';
-    sctx.fillRect(snakeX, snakeY, snakeWidth, snakeHeight);
-
-    snakeX = snakeX+snakeSpeedX;
-    snakeY = snakeY+snakeSpeedY;
-
-    if ((snakeX===foodX) && (snakeY===foodY)) {
-        food();
-    }
-
-    if (snakeX>ctxWidth || snakeX <0) {
-        snakeWidth = 75;
-        snakeX = ctxWidth/2;
-        snakeY = ctxHeight/2;
-        snakeSpeedX = 5;
-        snakeSpeedY = 0;
-    }
-
-    if (snakeY>ctxHeight || snakeY<0) {
-        snakeWidth = 75;
-        snakeX = ctxWidth/2;
-        snakeY = ctxHeight/2;
-        snakeSpeedX = 5;
-        snakeSpeedY = 0;
-    }}
-
-const food = function() {
-    foodX = Math.floor(Math.random()*(ctxWidth-foodSize));
-    foodY = Math.floor(Math.random()*(ctxHeight-foodSize));
-
-    //console.log('foodX='+foodX);
-    //console.log('foodY='+foodY);
-
-    showFood();
-}
-
-const showFood = function() {
-    sctx.fillStyle = '#fff';
-    sctx.fillRect(foodX, foodY, foodSize, foodSize);
-}
-
-const snakeUp = function() {
-    snakeSpeedX = 0;
-    snakeSpeedY = 5;
-
-    sctx.fillStyle = '#0f0';
-    sctx.fillRect(snakeX+(snakeWidth-snakeHeight), snakeY+(snakeHeight-snakeWidth), snakeHeight, snakeWidth);
-}
-
-food();
+let xVelocity = 0
+let yVelocity = 0
 
 const program = function() {
-    tableS();
-    Snake();
-    showFood();
+    clearScreen()
+    drawSnake()
+    changeSnakePosition()
+    setTimeout(program, 1000/snakeSpeed)
 }
 
-setInterval(program, 1000/60);
+function clearScreen() {
+    sctx.fillStyle = 'black'
+    sctx.fillRect(0, 0, sctxWidth, sctxHeight)
+}
+
+function drawSnake() {
+    sctx.fillStyle = 'red'
+    sctx.fillRect(headX * tileCount, headY*tileCount, tileCount, tileCount)
+}
+
+function changeSnakePosition() {
+    headX = headX + xVelocity
+    headY = headY + yVelocity
+}
+
+document.body.addEventListener('keydown', keyDown)
+
+function keyDown(event) {
+    if(event.keyCode == 87) {
+        if(yVelocity == 1) return
+        yVelocity = -1
+        xVelocity = 0
+    } //up
+
+    if(event.keyCode == 83) {
+        if(yVelocity == -1) return
+        yVelocity = 1
+        xVelocity = 0
+    } //down
+
+    if(event.keyCode == 65) {
+        yVelocity = 0
+        xVelocity = -1
+    } //left
+
+    if(event.keyCode == 68) {
+        yVelocity = 0
+        xVelocity = 1
+    } //right
+}
+
+program()
