@@ -30,6 +30,8 @@ let bounceBallSpeedX = 7
 let bounceBallSpeedY = 7
 //console.log(pointsArray)
 
+let bounceBallLoseBool
+
 function randomBlockColor() {
     let j = Math.floor(Math.random()*blockColors.length)
     pointColor = blockColors[j]

@@ -59,12 +59,12 @@
                     <li><span style=color:green>Memory game</span></li>
                     <li><span style=color:Green>Kółko i krzyżyk</span></li>
                     <li><span style=color:green>1024</span></li>
-                    <li><span style=color:orange>Snake</span></li>
+                    <li><span style=color:green>Snake</span></li>
                     <li><span style=color:green>Ping Pong</span></li>
-                    <li><span style=color:red>Tetris</span></li>
+                    <li><span style=color:green>Rock - Paper - Scissors</span></li>
                     <li><span style=color:green>Rectengle</span></li>
-                    <li><span style=color:orange>Bounce Ball</span></li>
-                    <li><span style=color:orange>Gra w budowanie wieży</span></li>
+                    <li><span style=color:green>Bounce Ball</span></li>
+                    <li><span style=color:green>Lights Out</span></li>
                 </ul>
             </div>
 
@@ -237,18 +237,12 @@
 
 
                         <div class="tinyTitle">
-                            Tower
+                            Lights Out
                         </div>
-        
                             <div class="scripts">
-                                <div id='tower'>
-                                    <canvas id='towercanv'></canvas>
-                                    <script src='tower.js'></script>
-                                    <button onclick="towerDown()">Click!</button>
-                                </br>
-                                    <div style='clear:both'></div>
-                                </div>
+                                <div id='lightsOut'></div>
                             </div>
+                            <script src='lightsout.js'></script>
 
                         <div class="tinyTitle">
                             Breakout
@@ -260,6 +254,26 @@
                                     <script src='bounceball.js'></script>
                                 </br>
                                     <div style='clear:both'></div>
+                                </div>
+                            </div>
+
+                        <div class="tinyTitle">
+                            Rock - Paper - Scissors
+                        </div>
+        
+                            <div class="scripts">
+                                <div id='rockpaper'>
+                                    <div id='counter'>0 - 0</div>
+                                    <div id='player'></div>
+                                    <div id='round' onclick="rockpaper()">NEXT ROUND</div>
+                                    <div id='ai'></div>
+                                    <div id='emojis'>
+                                        <div id='rock' class='emoji' onclick="rockFunc()">🗿</div>
+                                        <div id='paper' class='emoji' onclick="paperFunc()">🧾</div>
+                                        <div id='scissors' class='emoji' onclick="scissorsFunc()">✂️</div>
+                                    </div>
+                                    <div id='info'> </div>
+                                    <script src='rockpaper.js'></script>
                                 </div>
                             </div>
                 </div>
