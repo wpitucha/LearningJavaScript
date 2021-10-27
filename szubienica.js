@@ -3,7 +3,7 @@ let alphabetDiv = '';
 let missclicks = 0
 let hit = false
 
-let hangmanInscription = "na paryskie getto pada deszcz"
+let hangmanInscription = "wisielec"
 hangmanInscription = hangmanInscription.toUpperCase()
 hangmanInscription = [...hangmanInscription]
 //console.log(hangmanInscription);
