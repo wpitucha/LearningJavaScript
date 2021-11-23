@@ -1,11 +1,34 @@
 let lightsOutMainDiv = document.getElementById('lightsOut')
+let lights_arr = [
+    [],
+    [],
+    [],
+    [],
+    []
+]
 
+for(let i=0; i<5; i++)
+    lights_arr[i].length = 5;
+
+/*
 for (let i=0; i<25; i++) {
     if (i%5 == 0)
         lightsOutMainDiv.innerHTML += '<div id="'+i+'" onClick="lightsOutFunc(this.id)" class="lightsOFF lights" style="clear: both"></div>'
     else
         lightsOutMainDiv.innerHTML += '<div id="'+i+'" onClick="lightsOutFunc(this.id)" class="lightsOFF lights" ></div>'
 }
+*/
+
+let light_counter = 1
+for(let i=0; i<5; i++) {
+    for(let j=0; j<5; j++) {
+        lightsOutMainDiv.innerHTML += '<div id="'+light_counter+'" onClick="lightsOutFunc(this.id)" class="lightsOFF lights" style="clear: both"></div>'
+        lights_arr[i][j] = document.getElementById(light_counter)
+        light_counter++
+    }
+}
+
+console.log(lights_arr)
 
 let lightsOutDivs = document.querySelectorAll('.lights')
 lightsOutDivs = [...lightsOutDivs]

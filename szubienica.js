@@ -31,7 +31,6 @@ document.getElementById('alfabet').innerHTML = alphabetDiv
 let = letters = document.querySelectorAll('.litera')
 letters = [...letters]
 
-console.log(crypto)
 
 letters.forEach(letter => {
     letter.addEventListener('click', function() {
